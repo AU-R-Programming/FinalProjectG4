@@ -7,6 +7,63 @@ output: html_document
 
 ## Caroline 
 
+```{r}
+my_lm = function(y, X) {
+  
+y <- as.vector(y)
+X <- as.matrix(X)
+ 
+
+col <- rep(1,n)
+n <- length(y)
+X[,1] <- rep(1,n)
+p <- dim(X)[2]
+df <- n - p
+
+beta.hat <- solve(t(X)%*%X)%*%t(X)%*%y
+
+return(beta.hat)
+}
+
+```
+
+## Confidence 
+
+```{r}
+my_lm = function(y, X, alpha = 0.05) {
+  
+  y <- as.vector(y)
+  X <- as.matrix(X)
+  
+  n <- length(y)
+  p <- dim(X)[2]
+  df <- n - p
+  
+  beta.hat <- solve(t(X)%*%X)%*%t(X)%*%response
+ 
+  resid <- y - X%*%as.matrix(beta.hat) 
+  sigma2.hat <- (1/df)*t(resid)%*%resid
+  
+  
+  var.beta <- sigma2.hat*solve(t(X)%*%X)
+  
+  quant <- 1 - alpha/2
+  ci.beta <- c(beta.hat - qnorm(p = quant)*sqrt(var.beta), beta.hat + 
+                 qnorm(p = quant)*sqrt(var.beta))
+  
+  return(list(beta = beta.hat, sigma2 = sigma2.hat, 
+              variance_beta = var.beta, ci = ci.beta))
+}
+```
+
+```{r}
+library(ggplot2)
+```
+
+
+
+
+
 
 
 
@@ -15,23 +72,3 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
