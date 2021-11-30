@@ -6,6 +6,7 @@ Authors: c(
   person("Baker", "Caroline", email = "cgb0056@auburn.edu", role = "aut")
   person("Yagmur","Ozdemir", email = "yzy0096@auburn.edu", role = "aut")
   person("Yu", "Sun", email = "yzs0104@auburn.edu", role = "aut"))
+Maintainer: Caroline Baker <cgb0056@auburn.edu>
 Description:  
     This package performs linear regression for which the parameter vector β of 
 length p is estimated using optimization. The user is able to choose the 
