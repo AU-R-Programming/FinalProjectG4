@@ -13,7 +13,7 @@ our_lm(resp, pred, alpha = 0.05)
 \arguments{
   \item{resp}{A \code{vector} of length n that represents a dependent variable we would like
   to explain/predict.}
-  \item{pred}{A \code{matrix} of dimension nxp whose first column is a vector of ones; this
+  \item{pred}{A \code{matrix} of dimension nxp; this
   matrix is an independent variable used to predict resp and beta.}
   \item{alpha}{A \code{numeric} used to denote a .05 significance level and measure the
   probability of a type I error.}
