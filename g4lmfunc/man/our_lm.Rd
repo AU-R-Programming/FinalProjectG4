@@ -42,7 +42,7 @@ Yu Sun
 
 \examples{
 resp = crop.data$yield
-> pred = cbind(crop.data$density, crop.data$block, crop.data$fertilizer)
-> alpha = 0.05
-> our_lm(resp, pred, alpha)
+pred = cbind(crop.data$density, crop.data$block, crop.data$fertilizer)
+alpha = 0.05
+our_lm(resp, pred, alpha)
 }
