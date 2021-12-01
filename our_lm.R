@@ -66,4 +66,5 @@ our_lm = function(resp, pred, alpha = 0.05){
 
   return(list(coefficients = beta_hat, confidence_interval = conf_int, R_square = R_square, C_p = C_p, F_stat = F_star, p = p_value, plot1))
 }
+
 library("devtools")
