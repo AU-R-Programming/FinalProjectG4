@@ -3,7 +3,9 @@ output: github_document
 ---
 
 # FinalProjectG4
+[Package Repository:FinalProjectG4] (https://github.com/AU-R-Programming/FinalProjectG4)
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+We are using the `crop.data.csv` dataset as an example.
+```{r}
+library(g4lmfunc)
 ```
