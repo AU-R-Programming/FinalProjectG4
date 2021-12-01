@@ -1,0 +1,18 @@
+Package: g4lmfunc
+Type: Package
+Title: Linear Regression Function
+Version: 0.1.0
+Authors: c(
+  person("Baker", "Caroline", email = "cgb0056@auburn.edu", role = "aut")
+  person("Yagmur","Ozdemir", email = "yzy0096@auburn.edu", role = "aut")
+  person("Yu", "Sun", email = "yzs0104@auburn.edu", role = "aut"))
+Maintainer: Caroline Baker <cgb0056@auburn.edu>
+Description:  This package performs linear regression for which the parameter vector β of 
+    length p is estimated using optimization. The user is able to choose the 
+    significance level α to obtain the 1-alpha confidence intervals for beta.
+    Moreover, plots are available to compare residuals vs fitted-values and view a 
+    qq-plot and histogram of residuals. R^2 and C_p values are included, and the 
+    user may perform a test using an F-test statistic and p-values.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
