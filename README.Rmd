@@ -5,23 +5,16 @@ output: github_document
 # FinalProjectG4
 [Package Repository:FinalProjectG4] (https://github.com/AU-R-Programming/FinalProjectG4)
 
-The package can be downloaded by using the `devtools::install_github` function. After downloading the package, we need to call the function called `g4lmfunc`. After activating the function it is ready to use. We will apply our function to the `crop.data.csv` dataset as an example. 
+The package name is `FinalProjectG4` and the function used in the package is called `g4lmfunc`. This can be seen as an alternative of in-built linear regression functions in `R`. The user must provide the response, predictors. Significance level is optional, it is 0.05 by default. It can also be changed by the user.
+
+The package can be downloaded by using the `devtools::install_github` function. After downloading the package, we need to call the function `g4lmfunc`. After activating the function, it is ready to use. We apply our function to the `crop.data.csv` dataset as an example. We take the yield as response and density, block, fertilizer as predictors.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(g4lmfunc)
 cropdata = read.csv("C:/Users/yagmu/Desktop/Auburn/Courses/Fall21/Stat6210/Github/FinalProjectG4/crop.data.csv")
+resp = cropdata$yield
+pred = cbind(cropdata$density, cropdata$block, cropdata$fertilizer)
+fitlm_our = our_lm(resp, pred, alpha = 0.05)
+fitlm_our
 ```
-
-Then we apply the `lm` function which is already available in `R`. We take the yield as response and density, block, fertilizer as predictors. 
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-fitlm = lm(yield~density+block+fertilizer, data = cropdata)
-summary(fitlm)
-confint(fitlm)
-par(mfrow = c(2,2))
-plot(fitted(fitlm),residuals(fitlm))
-abline(h=0, col = "pink")
-```
-
-Now, we apply our function `our_lm` to the same data.
 
