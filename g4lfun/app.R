@@ -1,4 +1,5 @@
-#
+#This is a Shiny web application.You can run the application by clicking the 'Run App' button above.
+#Find out more information is here: https://github.com/AU-R-Programming/FinalProjectG4
 
 library(shiny)
 library(g4lmfunc)
