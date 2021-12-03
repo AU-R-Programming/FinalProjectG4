@@ -15,7 +15,7 @@ The package can be downloaded by using the `devtools::install_github` function. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(g4lmfunc)
-cropdata = read.csv("C:/Users/yagmu/Desktop/Auburn/Courses/Fall21/Stat6210/Github/FinalProjectG4/crop.data.csv")
+cropdata = read.csv(file = "crop.data.csv")
 resp = cropdata$yield
 pred = cbind(cropdata$density, cropdata$block, cropdata$fertilizer)
 fitlm_our = our_lm(resp, pred, alpha = 0.05)
