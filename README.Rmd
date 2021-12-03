@@ -11,7 +11,7 @@ The user must provide the response and predictors; a significance level (alpha) 
 `resp` : A vector of length n that represents a dependent variable we would like to explain/predict.
 `pred` : A matrix of dimension nxp; this matrix is an independent variable used to predict resp and beta.
 
-The package can be downloaded by using the `devtools::install_github` function. After downloading the package, the function `our_lm` may be utlizied once retrieving the package with `libarary(g4lmfunc)`. We apply our function to the `crop.data.csv` dataset as an example by taking the yield as response and density, block, and fertilizer as predictors.
+The package can be downloaded by using the `devtools::install_github` function. After downloading the package, the function `our_lm` may be utilized once retrieving the package with `libarary(g4lmfunc)`. We apply our function to the `crop.data.csv` data set as an example by taking the yield as response and density, block, and fertilizer as predictors.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(g4lmfunc)
