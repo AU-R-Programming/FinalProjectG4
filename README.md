@@ -3,24 +3,13 @@
 
 \[Package Repository:FinalProjectG4\]
 (<https://github.com/AU-R-Programming/FinalProjectG4>)
+The repository name is `FinalProjectG4`, and the package within is titled `g4lmfunc`. Included in this package is the function `our_lm` which can be seen as an alternative of in-built linear regression functions in `R`. 
 
-The package name is `FinalProjectG4` and the function used in the
-package is called `g4lmfunc`. The function within the package, `our_lm`
-can be seen as an alternative of in-built linear regression functions in
-`R`.
+The user must provide the response and predictors; a significance level (alpha) is optional and can be changed by the user, but it remains 0.05 by default.
+`resp` : A vector of length n that represents a dependent variable we would like to explain/predict.
+`pred` : A matrix of dimension nxp; this matrix is an independent variable used to predict resp and beta.
 
-The user must provide the response and predictors; a significance level
-(alpha) is optional and can be changed by the user, but it remains 0.05
-by default. `resp` : A vector of length n that represents a dependent
-variable we would like to explain/predict. `pred` : A matrix of
-dimension nxp; this matrix is an independent variable used to predict
-resp and beta.
-
-The package can be downloaded by using the `devtools::install_github`
-function. After downloading the package, we need to call the function
-`g4lmfunc`. After activating the function, it is ready to use. We apply
-our function to the `crop.data.csv` dataset as an example. We take the
-yield as response and density, block, and fertilizer as predictors.
+The package can be downloaded by using the `devtools::install_github` function. After downloading the package, the function `our_lm` may be utilized once retrieving the package with `libarary(g4lmfunc)`. We apply our function to the `crop.data.csv` data set as an example by taking the yield as response and density, block, and fertilizer as predictors.
 
     ## $coefficients
     ##           A           B           C           D 
@@ -50,3 +39,6 @@ yield as response and density, block, and fertilizer as predictors.
     ## NULL
 
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+After running the sample code above, plots including residuals vs fitted-values, a qq-plot of residuals, and a histogram (or density) of residuals are made available. Further analysis of the `our_lm` function includes the return of an estimated coefficient vector β of length p via optimization, a confidence interval, R^2 and C_p values, as well as an F statistic and p value.
+
