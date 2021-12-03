@@ -5,16 +5,22 @@
 (<https://github.com/AU-R-Programming/FinalProjectG4>)
 
 The package name is `FinalProjectG4` and the function used in the
-package is called `g4lmfunc`. This can be seen as an alternative of
-in-built linear regression functions in `R`. The user must provide the
-response, predictors. Significance level is optional, it is 0.05 by
-default. It can also be changed by the user.
+package is called `g4lmfunc`. The function within the package, `our_lm`
+can be seen as an alternative of in-built linear regression functions in
+`R`.
+
+The user must provide the response and predictors; a significance level
+(alpha) is optional and can be changed by the user, but it remains 0.05
+by default. `resp` : A vector of length n that represents a dependent
+variable we would like to explain/predict. `pred` : A matrix of
+dimension nxp; this matrix is an independent variable used to predict
+resp and beta.
 
 The package can be downloaded by using the `devtools::install_github`
 function. After downloading the package, we need to call the function
 `g4lmfunc`. After activating the function, it is ready to use. We apply
 our function to the `crop.data.csv` dataset as an example. We take the
-yield as response and density, block, fertilizer as predictors.
+yield as response and density, block, and fertilizer as predictors.
 
     ## $coefficients
     ##           A           B           C           D 
